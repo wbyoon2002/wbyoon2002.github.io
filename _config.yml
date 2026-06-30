@@ -249,7 +249,8 @@ exclude:
   - assets/html/
   - assets/jupyter/
   - assets/pdf/example_pdf.pdf
-  - assets/video/
+  - assets/video/pexels-engin-akyurt-6069112-960x540-30fps.mp4
+  - assets/video/tutorial_al_folio.mp4
   - purgecss.config.js
   - README.md
   - readme_preview/

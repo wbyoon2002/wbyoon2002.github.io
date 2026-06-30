@@ -2,7 +2,7 @@
 layout: page
 title: Hybrid Actuation Modeling for LASDRA
 description: MATLAB modeling and power analysis for hybrid actuation in a large aerial robot system.
-img: assets/img/projects/lasdra/power_hybrid.png
+img: assets/img/projects/lasdra/thumbnail_hybrid_video.png
 importance: 2
 category: research
 ---
@@ -13,21 +13,57 @@ category: research
 
 I adapted an existing MATLAB mathematical model to incorporate hybrid-actuation logic for LASDRA, a Large-Size Aerial Skeleton System with Distributed Rotor Actuation. The project focused on converting real hardware specifications into high-fidelity simulation parameters and comparing power consumption across internal, external, and hybrid-actuated configurations.
 
-<div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/projects/lasdra/power_internal.png" title="Internal actuation power consumption" class="img-fluid rounded z-depth-1" %}
+## Simulation Results
+
+### Internal actuation
+
+<div class="row align-items-start mt-3">
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/lasdra/power_internal.png" title="Internal actuation power consumption graph" class="img-fluid rounded z-depth-1" %}
+    <div class="caption">
+      Power consumption profile for the internal-actuation configuration.
+    </div>
   </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/projects/lasdra/power_external.png" title="External actuation power consumption" class="img-fluid rounded z-depth-1" %}
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/lasdra_simulation_internal.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true loop=true muted=true %}
+    <div class="caption">
+      Matching simulation playback for the internal-actuation case.
+    </div>
   </div>
 </div>
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/projects/lasdra/power_hybrid.png" title="Hybrid actuation power consumption" class="img-fluid rounded z-depth-1" %}
+
+### External actuation
+
+<div class="row align-items-start mt-3">
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/lasdra/power_external.png" title="External actuation power consumption graph" class="img-fluid rounded z-depth-1" %}
+    <div class="caption">
+      Power consumption profile for the external-actuation configuration.
+    </div>
+  </div>
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/lasdra_simulation_external.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true loop=true muted=true %}
+    <div class="caption">
+      Matching simulation playback for the external-actuation case.
+    </div>
   </div>
 </div>
-<div class="caption">
-  Comparative power consumption graphs for internal, external, and hybrid actuation configurations.
+
+### Hybrid actuation
+
+<div class="row align-items-start mt-3">
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/lasdra/power_hybrid.png" title="Hybrid actuation power consumption graph" class="img-fluid rounded z-depth-1" %}
+    <div class="caption">
+      Power consumption profile for the hybrid-actuation configuration.
+    </div>
+  </div>
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/lasdra_simulation_hybrid.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true loop=true muted=true %}
+    <div class="caption">
+      Matching simulation playback for the hybrid-actuation case.
+    </div>
+  </div>
 </div>
 
 ## Contributions
