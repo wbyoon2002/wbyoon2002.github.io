@@ -10,6 +10,16 @@ cleanup() {
 }
 trap cleanup EXIT
 
+if grep -Eq '^[[:space:]]*-[[:space:]]*_posts/?[[:space:]]*$' _config.yml; then
+  echo "distill integration checks skipped: _posts are excluded for this site"
+  exit 0
+fi
+
+if ruby -ryaml -e 'config = YAML.load_file("_config.yml"); exit(config.dig("al_folio", "features", "distill", "enabled") == false ? 0 : 1)'; then
+  echo "distill integration checks skipped: distill is disabled for this site"
+  exit 0
+fi
+
 cat >"${tmp_override}" <<'YAML'
 giscus:
   repo: alshedivat/al-folio
