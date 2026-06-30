@@ -10,6 +10,11 @@ cleanup() {
 }
 trap cleanup EXIT
 
+if grep -Eq '^[[:space:]]*-[[:space:]]*_posts/?[[:space:]]*$' _config.yml; then
+  echo "comments integration checks skipped: _posts are excluded for this site"
+  exit 0
+fi
+
 cat >"${tmp_override}" <<'YAML'
 giscus:
   repo: alshedivat/al-folio
